@@ -1,3 +1,5 @@
+"use client"
+
 import { workouts } from "@/data/workouts"
 import WorkoutCard from "../WorkoutCard"
 import {Workout} from "@/types/workout"
