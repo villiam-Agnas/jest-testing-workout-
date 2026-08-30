@@ -10,13 +10,14 @@ type WorkoutCardProps = {
 
 const WorkoutSelection = ({handleClick}: WorkoutCardProps) => {
   return(
-    <div data-testid="workout-selection">
-      <h2>Choose your workout</h2>
-
-      {workouts.map((workout) => (
-        <WorkoutCard key={workout.id} workout={workout} handleClick={handleClick} />
-      ))}
-      
+    <div>
+      <h2 className="text-3xl m-6 text-center">Choose your workout</h2>
+      <div data-testid="workout-selection" className="flex flex-wrap justify-center gap-4">
+        {workouts.map((workout) => (
+          <WorkoutCard key={workout.id} workout={workout} handleClick={handleClick} />
+        ))}
+        
+      </div>
     </div>
   )
 }

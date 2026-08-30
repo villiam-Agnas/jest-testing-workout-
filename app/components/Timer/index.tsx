@@ -22,16 +22,16 @@ const Timer = ({ startTime }: { startTime: number }) => {
   }
 
   return (
-    <div>
-      <p>{time}</p>
+    <div className="text-center">
+      <p className="text-7xl font-bold text-white">{time}</p>
 
       {time === 0 ? (
         <>
-          <p>You did it</p>
-          <button onClick={reset}>Reset</button>
+          <p className="mt-4 text-3xl font-bold text-white">You did it</p>
+          <button className="mt-4 cursor-pointer rounded-lg border-2 border-black bg-cyan-100 p-2 text-xl" onClick={reset}>Reset</button>
         </>
       ) : (
-        <button onClick={() => setStarted(true)}>
+        <button className="mt-4 cursor-pointer rounded-lg border-2 border-black bg-cyan-100 p-2 text-xl" onClick={() => setStarted(true)}>
           {started ? "Lets go" : "Start"}
         </button>
       )}
